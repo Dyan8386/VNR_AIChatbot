@@ -2,11 +2,7 @@
 import { GoogleGenAI, Chat } from "@google/genai";
 import { SYSTEM_INSTRUCTION } from '../constants';
 
-if (!process.env.API_KEY) {
-  throw new Error("API_KEY environment variable not set");
-}
-
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+const ai = new GoogleGenAI({ apiKey: "AIzaSyBnrv3igcHZWVijsYtDZy5InbwihkOzGlo" });
 
 export const createChatSession = (): Chat => {
   const chat = ai.chats.create({
